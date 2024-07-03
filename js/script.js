@@ -42,6 +42,7 @@ const renderItems = (data) => {
 
     data.forEach(element => {
         const template = document.createElement('div')
+        template.classList.add('template')
 
         const img = document.createElement('img')
         img.src = element.flags[0]

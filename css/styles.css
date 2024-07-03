@@ -9,3 +9,13 @@ h1 {
   color: #333;
 }
 
+.countriesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding: 60px;
+}
+
+.template img {
+  width: 500px;
+}
