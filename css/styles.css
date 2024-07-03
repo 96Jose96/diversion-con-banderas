@@ -7,6 +7,7 @@ body {
 
 h1 {
   color: #333;
+  text-align: center;
 }
 
 .countriesList {
@@ -14,8 +15,19 @@ h1 {
   flex-wrap: wrap;
   gap: 60px;
   padding: 60px;
+  justify-content: center;
 }
 
 .template img {
-  width: 500px;
+  width: 250px;
+  padding: 15px;
+}
+
+.template h2 {
+  padding: 15px;
+}
+
+.template {
+  background-color:  white;
+  width: 300px;
 }

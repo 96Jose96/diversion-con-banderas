@@ -23,6 +23,7 @@
 // - Puedes manipular el `HTML` si lo necesitaras. 
 // - Si necesitas añadir clases a un elemento mediante JS, lo puedes hacer con `elemento.classList.add('clase que quieres añadir')` y para eliminar `elemento.classList.remove('clase que quieres añadir')`
 
+
 const fetchFlags = async () => {
     try {
         const response = await fetch('https://restcountries.com/v3/all')
@@ -53,9 +54,46 @@ const renderItems = (data) => {
         flagName.textContent = element.name.common
         template.appendChild(flagName)
 
+        //template.addEventListener('click', () => details(element))
+
         const countriesList = document.getElementById('countries-list')
         countriesList.appendChild(template)
     });
 }
 
+// NO CHE CONSEGUIDO HACER LA VENTANA EMERGENTE
+
+// const details = (element) => {  //se invoca en la linea 56
+//     const windowsModal = document.getElementById('windowsModal');
+//     const modalContent = document.getElementById('modalContent');
+
+//     const modalName = document.createElement('h3')
+//     modalName.textContent = element.name.common
+//     modalContent.appendChild(modalName);
+
+//     const modalImg = document.createElement('img')
+//     img.src = element.flags[0]
+//     img.alt = element.name.common
+//     modalImg.appendChild(modalImg)
+
+
+//     const capital = document.createElement('h3');
+//     capital.textContent = `$Capital: ${element.capital[0]}`
+//     modalContent.appendChild(capital)
+
+//     const population = document.createElement('p')
+//     population.textContent = `Poblacion: ${element.population}`
+//     modalContent.appendChild(population)
+
+//     modalContent.style.display = 'block'
+
+//     const closeModal = document.querySelector('.close')
+//     closeModal.onclick = () => {
+//         modal.style.display = 'none'
+//     }
+// }
+
+
+
 fetchFlags().then((data) => renderItems(data))
+//document.body.insertAdjacentHTML('beforeend', )
